@@ -14,7 +14,7 @@ export default async function handler(req, res) {
 
           return res.status(200).json({success:true,movie})
         }catch(error){
-          return res.status(400).json({success:false,error:'Falla de servidor'})
+          return res.status(400).json({success:false,error})
         }
         default:
           return res.status(500).jon({success:false,error:'falla de servidor'})

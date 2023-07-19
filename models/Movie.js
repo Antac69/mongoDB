@@ -7,7 +7,7 @@ const MovieSchema = new mongoose.Schema({
   },
   plot: {
     type: String,
-    required:[true,'esto es un plot']
+    required:[true,'por favor ingrese el plot']
   },
 });
 
