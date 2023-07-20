@@ -1,7 +1,12 @@
 import Link from "next/link";
+import { useRouter } from "next/router";
 import React, { useState } from "react";
 
 const New = () => {
+  //agregando el router
+  const router = useRouter()
+
+  //creando constantes
   const [form, setForm] = useState({ title: "", plot: "" });
   const [message,setMessage] = useState([])
 
@@ -39,6 +44,8 @@ const New = () => {
             {message:error.message}
           ]);
         }
+      }else{
+        router.push('/')
       }
     } catch (error) {
       console.log(error);
