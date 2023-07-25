@@ -17,10 +17,13 @@ export default function Home({ movies }) {
         <h1>Movies</h1>
         <Link href='/new'className="btn btn-primary w-100 mb-2">Agregar</Link>
         {movies.map(({ _id, title, plot }) => (
-          <div className="card mb-2" key={_id}>
+          <div className="card mb-2 " key={_id}>
             <div className="card-body">
               <div className="h5 text-uppercase">{title}</div>
               <p className="fw-light">{plot}</p>
+              <Link href={`${_id}`} className="btn btn-success btn-sm ">
+              Mas info...
+              </Link>
             </div>
           </div>
         ))}
